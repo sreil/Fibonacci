@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+   int number; // user defined
+   int first = 0;  //first number
+   int second = 1; // second number
+   int next; // will add previous 2.  i.e. if entered 2 numbers will add 0 + 1
+   int i;
+
+   cout << "How many Fibonacci numbers would you like? \n";
+   cin >> number;
+
+   cout << "The first " << number << " numbers of the Fibonacci sequence are the following: " << endl;
+
+   for (i = 0; i < number ; i++ )
+   {
+      if ( i <= 1 )
+         next = i;
+      else
+      {
+         next = first + second;
+         first = second;
+         second = next;
+      }
+      cout << next << endl;
+   }
+
+   return 0;
+}
